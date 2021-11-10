@@ -11,7 +11,6 @@ public abstract class Compteur {
         try {
         Scanner scanner=new Scanner(new File(nomFichier));
         // On boucle sur chaque ligne
-        while (scanner.hasNextLine()) {
             scanner.useLocale(Locale.US);
             scanner.useDelimiter(",|\\-|\\.|\\!|\\(|\\)|\\'|\\\"|\t|\n|\r\n|\s");
             String mot;
@@ -22,7 +21,6 @@ public abstract class Compteur {
                     addOccurrence(mot);
                 }
             }
-        }
         scanner.close();
     }
     catch (Exception e){
