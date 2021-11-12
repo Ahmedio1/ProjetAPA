@@ -1,4 +1,4 @@
-public class CompteurTest extends Compteur {
+public class CompteurTest extends CompteurTableau {
 
     public CompteurTest(String fichierTexte) {
         super(fichierTexte);
@@ -11,6 +11,7 @@ public class CompteurTest extends Compteur {
         if (
                 args.length<1){ System.err.println("nom de fichier manquant");}
         else {
+
             CompteurTest c = new CompteurTest(args[0]);}
     }
 }

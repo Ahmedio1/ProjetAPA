@@ -9,15 +9,19 @@ public abstract class Compteur {
     public abstract void addOccurrence(String mot);
     public Compteur (String nomFichier){
         try {
+            nbMots=0;
+            nbMots5=0;
         Scanner scanner=new Scanner(new File(nomFichier));
         // On boucle sur chaque ligne
             scanner.useLocale(Locale.US);
             scanner.useDelimiter(",|\\-|\\.|\\!|\\(|\\)|\\'|\\\"|\t|\n|\r\n|\s");
             String mot;
             while (scanner.hasNext()){
+                nbMots++;
                 mot=scanner.next();
                 mot.toLowerCase();
                 if (mot.length()>=5){
+                    nbMots5++;
                     addOccurrence(mot);
                 }
             }
